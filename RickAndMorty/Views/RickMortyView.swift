@@ -37,7 +37,7 @@ struct RickMortyView: View {
             }
             .navigationTitle("Rick Characters")
             .navigationDestination(for: CharacterModel.self) { character in
-                DetailViewRickAndMorty(character: character)
+                DetailCharacterView(character: character)
             }
             .searchable(text: $bvm.searchedName, prompt: "Search character")
             .animation(.easeInOut, value: vm.characters)

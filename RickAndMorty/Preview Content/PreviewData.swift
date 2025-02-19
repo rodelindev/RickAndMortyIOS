@@ -25,10 +25,10 @@ struct RepositoryMortyPreview: ProtocolMorty {
 extension CharacterModel {
     static let preview = CharacterModel(
         id: 1,
-        name: "Alberto",
+        name: "Abadango Cluster Princess",
         status: .unknown,
-        species: "Humano",
-        gender: "Male",
+        species: "Alien",
+        gender: "Female",
         image: URL(string: "https://rickandmortyapi.com/api/character/avatar/6.jpeg")!,
         created: .now,
         origin: CharacterOriginModel(name: "Tierra"),

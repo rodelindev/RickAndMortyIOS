@@ -15,7 +15,7 @@ struct FavoritesListView: View {
             listFavorites
             .navigationTitle("Favorites")
             .navigationDestination(for: CharacterModel.self) { character in
-                DetailViewRickAndMorty(character: character)
+                DetailCharacterView(character: character)
             }
         }
     }
@@ -23,7 +23,14 @@ struct FavoritesListView: View {
     @ViewBuilder
     var listFavorites: some View {
         if vm.favChars.isEmpty {
-            Text("No favorites yet")
+            VStack {
+                Image(systemName: "star.slash.fill")
+                    .resizable()
+                    .frame(width: 100, height: 100)
+                    .foregroundColor(.gray)
+                Text("No favorites yet")
+                    .font(.headline)
+            }
         } else {
             List(vm.favChars) { character in
                 NavigationLink(value: character) {

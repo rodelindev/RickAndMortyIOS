@@ -16,7 +16,7 @@ struct CharacterCell: View {
         HStack {
             VStack(alignment: .leading){
                 Text(character.name)
-                Text(character.species)
+                Text("Specie: \(character.species)")
             }
             Spacer()
             Image(systemName: "star.fill")
