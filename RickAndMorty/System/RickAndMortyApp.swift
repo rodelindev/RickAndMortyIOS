@@ -9,9 +9,14 @@ import SwiftUI
 
 @main
 struct RickAndMortyApp: App {
+    @State var vm = RickMortyListVM()
+    @State var favVM = FavoritesVM()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HomeView()
+                .environment(vm)
+                .environment(favVM)
         }
     }
 }
